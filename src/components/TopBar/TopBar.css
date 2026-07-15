@@ -1,0 +1,33 @@
+/* TopBar.css */
+.topbar {
+  background: var(--primary);
+  padding: 8px 0;
+  text-align: center;
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+}
+.topbar-text {
+  font-size: 13px;
+  color: white;
+}
+.topbar-code {
+  background: rgba(0,0,0,0.25);
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.topbar-close {
+  position: absolute;
+  right: 20px;
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  transition: color var(--transition);
+}
+.topbar-close:hover { color: white; }

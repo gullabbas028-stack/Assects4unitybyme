@@ -1,0 +1,70 @@
+/* MembershipBanner.css */
+.membership-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0f0800 0%, #1a0f00 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 2px solid var(--primary);
+}
+.membership-header { text-align: center; margin-bottom: 36px; }
+.membership-header h2 {
+  font-family: var(--font-head);
+  font-size: 30px; font-weight: 700; color: var(--white); margin-bottom: 8px;
+}
+.membership-header p { font-size: 14px; color: var(--text-2); }
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.plan-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  position: relative;
+  transition: transform var(--transition), border-color var(--transition);
+}
+.plan-card:hover { transform: translateY(-4px); }
+.plan-highlight {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary), 0 8px 32px rgba(232,93,4,0.2);
+}
+.plan-badge {
+  position: absolute;
+  top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  font-size: 11px; font-weight: 700;
+  padding: 3px 14px; border-radius: 20px;
+  white-space: nowrap;
+}
+.plan-name {
+  font-family: var(--font-head);
+  font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 12px;
+}
+.plan-price {
+  display: flex; align-items: baseline; gap: 3px; margin-bottom: 20px;
+}
+.plan-currency { font-size: 16px; color: var(--primary); font-weight: 700; }
+.plan-num { font-family: var(--font-head); font-size: 38px; font-weight: 700; color: var(--primary); line-height: 1; }
+.plan-period { font-size: 13px; color: var(--text-3); }
+.plan-features { list-style: none; margin-bottom: 22px; display: flex; flex-direction: column; gap: 8px; }
+.plan-features li { font-size: 13px; color: var(--text-2); display: flex; align-items: center; gap: 8px; }
+.check { color: var(--green); font-size: 14px; }
+.plan-btn {
+  width: 100%; padding: 11px;
+  border-radius: var(--radius);
+  font-size: 14px; font-weight: 700;
+  transition: all var(--transition);
+}
+.plan-btn-primary { background: var(--primary); color: white; }
+.plan-btn-primary:hover { background: var(--primary-dark); }
+.plan-btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border-2); }
+.plan-btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+@media (max-width: 700px) {
+  .membership-grid { grid-template-columns: 1fr; }
+}

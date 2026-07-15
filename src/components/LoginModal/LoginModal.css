@@ -1,0 +1,57 @@
+/* LoginModal.css */
+.login-modal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--dark-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  width: 400px;
+  z-index: 300;
+  box-shadow: var(--shadow-lg);
+  animation: fadeUp 0.25s ease;
+}
+.lm-close {
+  position: absolute; top: 14px; right: 16px;
+  font-size: 16px; color: var(--text-3);
+  transition: color var(--transition);
+}
+.lm-close:hover { color: var(--white); }
+.lm-logo {
+  font-family: var(--font-head);
+  font-size: 20px; font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 22px;
+  display: flex; align-items: center; gap: 6px;
+}
+.lm-logo span { color: var(--white); }
+.lm-logo b { color: var(--primary); }
+.lm-tabs { display: flex; gap: 0; margin-bottom: 24px; border: 1px solid var(--border-2); border-radius: var(--radius); overflow: hidden; }
+.lm-tab {
+  flex: 1; padding: 9px; font-size: 13px; font-weight: 600;
+  color: var(--text-2); transition: all var(--transition);
+}
+.lm-tab.active { background: var(--primary); color: white; }
+.lm-form { display: flex; flex-direction: column; gap: 14px; }
+.lm-field { display: flex; flex-direction: column; gap: 5px; }
+.lm-field label { font-size: 12px; font-weight: 600; color: var(--text-2); }
+.lm-field input {
+  background: var(--dark-3); border: 1px solid var(--border-2);
+  border-radius: var(--radius); padding: 10px 13px;
+  font-size: 14px; color: var(--text); outline: none;
+  transition: border-color var(--transition);
+  font-family: var(--font-body);
+}
+.lm-field input:focus { border-color: var(--primary); }
+.lm-submit {
+  background: var(--primary); color: white;
+  padding: 11px; border-radius: var(--radius);
+  font-size: 14px; font-weight: 700; margin-top: 4px;
+  transition: background var(--transition);
+}
+.lm-submit:hover { background: var(--primary-dark); }
+.lm-forgot { font-size: 12px; color: var(--primary); text-align: center; transition: color var(--transition); }
+.lm-forgot:hover { color: var(--primary-light); }
+
+@media (max-width: 440px) { .login-modal { width: 94vw; padding: 28px 20px; } }
